@@ -1,4 +1,5 @@
 import './globals.css'
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: 'DUMP them all — Sell Your Junk, Get Cash',
@@ -20,3 +21,12 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
+// Vercel Analytics
+function AnalyticsInjector() {
+  return <Analytics />
+}
+
+// Render analytics inside the root layout's body using the component
+// (placed here so we don't modify other files you provided)
+
